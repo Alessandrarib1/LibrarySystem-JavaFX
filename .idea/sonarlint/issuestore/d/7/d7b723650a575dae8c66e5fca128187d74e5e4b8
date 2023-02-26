@@ -1,0 +1,15 @@
+
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²°œ¹8‚äœˆç0
+n	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²°œ¹8„äœˆç0
+F
+java:S1604ÿ"(Make this anonymous inner class a lambda(ÔÜ¥¹8‹äœˆç0
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Íûıøÿÿÿÿ8¬äœˆç0
+{	java:S115b"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(œÉ…ıÿÿÿÿ8¾æœˆç0
+c
+java:S1075b"ARefactor your code to get this URI from a customizable parameter.(œÉ…ıÿÿÿÿ8õæœˆç0
+Q
+java:S1481o"/Remove this unused "memberCode" local variable.(ôé«ñşÿÿÿÿ8¥çœˆç0
+^	java:S125Ü"<This block of commented-out lines of code should be removed.(£òäìúÿÿÿÿ8Èèœˆç0
+^	java:S125õ"<This block of commented-out lines of code should be removed.(ü³Ğ¿ûÿÿÿÿ8šêœˆç0
+U
+java:S1481ú"2Remove this unused "desirableList" local variable.(„ÎºÚüÿÿÿÿ8êœˆç0

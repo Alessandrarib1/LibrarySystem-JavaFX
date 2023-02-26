@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+    <tabs>
+        <Tab text="Lending/receiving">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <Pane layoutX="27.0" layoutY="86.0" prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="itemCodeLendingItem" layoutX="26.0" layoutY="46.0" promptText="Item code" />
+                                <TextField fx:id="membersIdTextBox" layoutX="26.0" layoutY="88.0" promptText="member identifier" />
+                                <Label fx:id="errorMessageLending" layoutX="27.0" layoutY="14.0" text="">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="lendItemButton" layoutX="75.0" layoutY="132.0" mnemonicParsing="false" onAction="#buttonLendingClick" text="Lending" />
+                            </children>
+                        </Pane>
+                        <Pane layoutX="352.0" layoutY="86.0" prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <TextField fx:id="itemCodeRecivingItem" layoutX="26.0" layoutY="43.0" promptText="Item code" />
+                                <Label fx:id="errorMessageReceiving" layoutX="27.0" layoutY="14.0" text="">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="lateReturnErrorMessage" layoutX="65.0" layoutY="80.0" text="">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="receivingItemButton" layoutX="75.0" layoutY="113.0" mnemonicParsing="false" onAction="#onLendingItemButtonClick" text="Receiving" />
+                            </children>
+                        </Pane>
+                        <Label fx:id="welcomeMessage" layoutX="27.0" layoutY="14.0" text="Label">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Collection">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="32.0" layoutY="14.0" text="Items">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <RadioButton id="allItemsRadioButton" fx:id="allItemsRadioButton" layoutX="443.0" layoutY="15.0" mnemonicParsing="false" text="All Items" />
+                        <RadioButton id="unavailableItemsRadioButton" fx:id="unavailableItemsRadioButton" layoutX="444.0" layoutY="46.0" mnemonicParsing="false" text="Unavailable Items" />
+                        <TableView fx:id="tableviewItem" layoutX="20.0" layoutY="79.0" prefHeight="266.0" prefWidth="560.0">
+                            <columns>
+                                <TableColumn prefWidth="75.0" text="Id">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="itemCode" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn prefWidth="75.0" text="Available">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="availability" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn prefWidth="75.0" text="Title">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="title" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn prefWidth="75.0" text="Author">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="author" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn prefWidth="75.0" text="Lender">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="lender" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                            </columns>
+                        </TableView>
+                        <Label fx:id="errorMessageCollection" layoutX="25.0" layoutY="35" text="">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+
+                        <Button id="addItemButton" fx:id="addItemButton" layoutX="240.0" layoutY="344.0" mnemonicParsing="false" onAction="#onAddNewItemButtonClick" text="Add New Item" />
+                        <Button id="deleteItemButton" fx:id="deleteItemButton" layoutX="502.0" layoutY="344.0" mnemonicParsing="false" onAction="#onDeleteItemButtonClick" text="Delete Item" />
+                        <Button id="editItemButton" fx:id="editItemButton" layoutX="388.0" layoutY="344.0" mnemonicParsing="false" onAction="#onEditItemButtonClick" text="Edit Item" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Members">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="32.0" layoutY="14.0" text="Members">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <TableView fx:id="tableviewMembers" layoutX="20.0" layoutY="79.0" prefHeight="266.0" prefWidth="560.0">
+                            <columns>
+                                <TableColumn prefWidth="75.0" text="Identifier">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="id" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn prefWidth="75.0" text="First Name">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="firstname" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn prefWidth="75.0" text="Last Name">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="lastname" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                                <TableColumn prefWidth="75.0" text="BirthDate">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="birthdate" />
+                                    </cellValueFactory>
+                                </TableColumn>
+                            </columns>
+                        </TableView>
+                        <Label fx:id="errorMessageMembers" layoutX="25.0" layoutY="35" text="">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Button id="deleteMemberButton" fx:id="deleteMemberButton" layoutX="487.0" layoutY="345.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Delete Member" />
+                        <Button id="editMemberButton" fx:id="editMemberButton" layoutX="346.0" layoutY="345.0" mnemonicParsing="false" onAction="#onEditMemberButtonClick" text="Edit Member" />
+                        <Button id="addMemberButton" fx:id="addMemberButton" layoutX="20.0" layoutY="345.0" mnemonicParsing="false" onAction="#onAddMembersButtonClick" text="Add Member" />
+                        <Button fx:id="btnImportMembers" layoutX="446.0" layoutY="19.0" mnemonicParsing="false" onAction="#onButtonImportClick" text="Import Members" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

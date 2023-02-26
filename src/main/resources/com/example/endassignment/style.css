@@ -1,0 +1,42 @@
+.button {
+    -fx-text-fill: white;
+    -fx-background-color: #048ABF;
+    -fx-background-radius: 5px;
+}
+
+.pane {
+    -fx-background-color: black;
+}
+
+#cancelButtonAddItem {
+    -fx-background-color: #d9534f;
+}
+
+#addItemButton {
+
+    -fx-background-color: #5cb85c;
+}
+
+#editItemButton {
+
+    -fx-background-color: #428bca;
+}
+
+#cancelButtonAdd {
+    -fx-background-color: #d9534f;
+}
+
+#addMemberButton {
+
+    -fx-background-color: #5cb85c;
+}
+
+
+
+
+
+
+
+
+
+
